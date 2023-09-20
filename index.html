@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Sign Up Form</title>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <!-- background image and logo to the left -->
@@ -12,7 +13,7 @@
             <img src="assets/images/halie-west-25xggax4bSA-unsplash.jpg"/>
 
             <!-- logo -->
-            <img src="assets/images/odin-lined.png"/>
+            <img style="background-color: cornflowerblue;" src="assets/images/odin-lined.png"/>
             <p>Odin</p>
             <p>Photo by Halie West on Unspash</p>
         </aside>
@@ -24,17 +25,32 @@
                 <p>
                     This is not a real online service! You know you need
                     something like this in your life to help you realize your
-                    deepest dreams.<br />Sign up <i>now</i> to get started
+                    deepest dreams.<br />Sign up <i>now</i> to get started.
                 </p>
+                <p>You <i>know</i> you want to.</p>
             </section>
             <!-- sign up form -->
             <section>
-                <form></form>
+                <h1>Let's do this!</h1>
+                <form>
+                    <label for="first-name">First Name</label>
+                    <input id="first-name" type="text"/>
+                    <label for="last-name">Last Name</label>
+                    <input id="last-name" type="text"/>
+                    <label for="email">Email</label>
+                    <input id="email" type="email"/>
+                    <label for="phone-number">Phone Number</label>
+                    <input id="phone-number" type="number"/>
+                    <label for="password">Password</label>
+                    <input id="password" type="password"/>
+                    <label for="confirm-password">Confirm Password</label>
+                    <input id="confirm-password" type="password"/>
+                </form>
             </section>
 
             <!-- create account button  -->
             <section>
-                <button>Create Account</button>
+                <button type="submit">Create Account</button>
             </section>
 
             <!-- already have an account link -->
