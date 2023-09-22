@@ -1,47 +1,61 @@
 /*
   Josh's Custom CSS Reset
 */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
-  }
-  * {
+}
+
+* {
     margin: 0;
     padding: 0;
-  }
-  body {
+}
+
+body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
-  }
-  img {
+}
+
+/* img {
     display: block;
     max-width: 100%;
-  }
-  input, button, textarea, select {
+} */
+
+input,
+button,
+textarea,
+select {
     font: inherit;
-  }
-  p, h1, h2, h3, h4, h5, h6 {
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     overflow-wrap: break-word;
-  }
-  #root, #__next {
-    isolation: isolate;
-  }
+}
+
 
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
+    -webkit-appearance: none;
 }
 
 /* Firefox */
 input[type=number] {
-  appearance: textfield;
+    appearance: textfield;
 }
 
 #main {
     display: grid;
     grid-template: repeat(10, 1fr) / repeat(10, 1fr);
     /* gap: 15px; */
-    text-align: center;
+    /* text-align: center; */
     height: 100%;
     /* padding: 16px; */
     justify-content: center;
@@ -53,13 +67,25 @@ input[type=number] {
     background: url(/assets/images/halie-west-25xggax4bSA-unsplash.jpg);
     grid-row: 1 / 11;
     grid-column: 1 / 5;
-    display: grid;
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    flex-direction: column;
+
+}
+
+.logo-container {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    flex-direction: row;
+
+    background-color: rgba(0, 0, 0, .5);
+    color: #fff;
 }
 
 #logo {
-    /* grid-template: repeat(10, 161px) / repeat(10, 320px); */
-
-    grid-row: 2 / 3;
-    grid-column: 1 / 5;
+    /* padding-top: 20px; */
+    padding-left: 20%;
 
 }
