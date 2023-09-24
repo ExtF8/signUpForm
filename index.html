@@ -20,64 +20,87 @@
                     />
                     <p id="odin">Odin</p>
                 </div>
-                <p class="credit">Photo by <a href="https://unsplash.com/s/photos/Halie-West">Halie West</a> on <a href="https://unsplash.com/">Unspash</a></p>
+                <p class="credit">
+                    Photo by
+                    <a href="https://unsplash.com/s/photos/Halie-West"
+                        >Halie West</a
+                    >
+                    on <a href="https://unsplash.com/">Unspash</a>
+                </p>
             </aside>
 
             <!-- intro text -->
-            <section class="intro-text-container">
-                <p>
-                    This is not a real online service! You know you need
-                    something like this in your life to help you realize your
-                    deepest dreams.<br />Sign up <em>now</em> to get started.
-                </p>
-                <p>You <em>know</em> you want to.</p>
-            </section>
-            <!-- sign up form -->
-            <section id="login-form">
-                <h1>Let's do this!</h1>
-                <form action="" method="post">
-                    <fieldset>
-                        <label for="first-name">First Name</label>
-                        <input id="first-name" type="text" required />
-                        <div id="first-name-error" class="error"></div>
+            <div id="content">
+                <section class="intro-text-container">
+                    <p>
+                        This is not a real online service! You know you need
+                        something like this in your life to help you realize
+                        your deepest dreams.<br />Sign up <em>now</em> to get
+                        started. <br />
+                        You <em>know</em> you want to.
+                    </p>
+                </section>
+                <!-- sign up form -->
+                <section class="form-container">
+                    <h1>Let's do this!</h1>
+                    <form action="" method="post">
+                        <div class="first-name">
+                            <label for="first-name">First Name</label>
+                            <input id="first-name" type="text" required />
+                            <div id="first-name-error" class="error"></div>
+                        </div>
+                        <div class="last-name">
+                            <label for="last-name">Last Name</label>
+                            <input id="last-name" type="text" required />
+                            <div id="last-name-error" class="error"></div>
+                        </div>
+                        <div class="email">
+                            <label for="email">Email</label>
+                            <input id="email" type="email" required />
+                            <div id="email-error" class="error"></div>
+                        </div>
+                        <div class="phone-number">
+                            <label for="phone-number">Phone Number</label>
+                            <input
+                                id="phone-number"
+                                type="number"
+                                required
+                                pattern="\d{10}"
+                            />
+                            <div id="phone-number-error" class="error"></div>
+                        </div>
+                        <div class="password">
+                            <label for="password">Password</label>
+                            <input id="password" type="password" required />
+                            <div id="password-error" class="error"></div>
+                        </div>
+                        <div class="confirm-password">
+                            <label for="confirm-password"
+                                >Confirm Password</label
+                            >
+                            <input
+                                id="confirm-password"
+                                type="password"
+                                required
+                            />
+                            <div
+                                id="confirm-password-error"
+                                class="error"
+                            ></div>
+                        </div>
+                    </form>
+                </section>
 
-                        <label for="last-name">Last Name</label>
-                        <input id="last-name" type="text" required />
-                        <div id="last-name-error" class="error"></div>
+                <!-- create account button  -->
+                <section class="button-container">
+                    <button type="submit">Create Account</button>
+                </section>
 
-                        <label for="email">Email</label>
-                        <input id="email" type="email" required />
-                        <div id="email-error" class="error"></div>
-
-                        <label for="phone-number">Phone Number</label>
-                        <input
-                            id="phone-number"
-                            type="number"
-                            required
-                            pattern="\d{10}"
-                        />
-                        <div id="phone-number-error" class="error"></div>
-
-                        <label for="password">Password</label>
-                        <input id="password" type="password" required />
-                        <div id="password-error" class="error"></div>
-
-                        <label for="confirm-password">Confirm Password</label>
-                        <input id="confirm-password" type="password" required />
-                        <div id="confirm-password-error" class="error"></div>
-                    </fieldset>
-                </form>
-            </section>
-
-            <!-- create account button  -->
-            <section id="button-container">
-                <button type="submit">Create Account</button>
-            </section>
-
-            <!-- already have an account link -->
-            <section id="login-container">
-                <p>Already have an account? <a>Log in</a></p>
-            </section>
+                <!-- already have an account link -->
+                <section class="login-container">
+                    <p>Already have an account? <a>Log in</a></p>
+                </section>
+            </div>
         </main>
     </body>
 </html>
