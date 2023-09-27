@@ -73,3 +73,44 @@ function validateInput(event) {
         inputElement.classList.remove('error-input');
     }
 }
+
+// Check if fields are valid
+function isFieldsValid(inputFields) {
+    let isValid = true;
+
+    inputFields.forEach((field) => {
+        const inputElement = document.getElementById(field);
+        const inputValue = inputElement.value;
+
+        if (!inputValue || inputElement.classList.contains('error-input')) {
+            isValid = false;
+        }
+    });
+
+    return isValid;
+}
+
+// Button alert
+const submitBtn = document.getElementById('create-btn');
+
+submitBtn.addEventListener('click', function () {
+    if (isFieldsValid(inputFields)) {
+        alert('Thanks for submitting your info to dev/null.');
+
+        inputFields.forEach((field) => {
+            const inputElement = document.getElementById(field);
+
+            inputElement.value = '';
+        });
+    } else {
+        inputFields.forEach((field) => {
+            const inputElement = document.getElementById(field);
+            if (
+                !inputElement.value ||
+                !inputElement.classList.contains('error-input')
+            ) {
+                validateInput({ target: inputElement });
+            }
+        });
+    }
+});
